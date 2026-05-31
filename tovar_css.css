@@ -1,0 +1,134 @@
+
+main.product-page {
+      padding-bottom: 36px;
+    }
+
+    .product-title {
+      margin: 0 0 16px;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text-large);
+    }
+
+    .product-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 22px;
+      row-gap: 14px;
+      align-items: start;
+    }
+
+    .product-image {
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 617 / 467;
+      object-fit: cover;
+    }
+
+    .product-info-top {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+
+    .product-card__head {
+      background: var(--main-color);
+      border-radius: 8px;
+      padding: 10px 12px;
+      display: grid;
+      gap: 4px;
+    }
+
+    .product-name {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--text-normal);
+    }
+
+    .product-price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .product-price {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--text-normal);
+    }
+
+    .product-actions {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .product-actions .icon-img {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      transition: filter 0.3s ease;
+    }
+
+    .product-actions .icon-img:hover {
+      filter: invert(82%) sepia(54%) saturate(543%) hue-rotate(33deg) brightness(96%) contrast(91%);
+    }
+
+    .product-text {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.45;
+      color: var(--text-normal);
+    }
+
+    .product-note {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.45;
+      color: var(--text-normal);
+    }
+
+    .product-note {
+      align-self: end;
+    }
+
+    .product-details {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 2px solid var(--text-large);
+    }
+
+    .product-details h3 {
+      margin: 0 0 6px;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text-large);
+    }
+
+    .product-details p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.45;
+      color: var(--text-normal);
+    }
+
+    .product-details h4 {
+      margin: 16px 0 6px;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text-large);
+    }

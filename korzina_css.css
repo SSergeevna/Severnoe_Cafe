@@ -1,0 +1,188 @@
+
+/* --- ОСНОВА САЙТА --- */
+.cart {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 44px;
+}
+
+.cart__heading {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.cart__heading h2 {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text-large);
+}
+
+.cart__heading span {
+  color: #7a8d84;
+  font-size: 26px;
+}
+
+.cart-list {
+  display: grid;
+  gap: 14px;
+}
+
+.cart-item {
+  background: var(--panel);
+  background: #90A79D;
+  border-radius: 16px;
+  padding: 10px;
+  display: flex;
+  grid-template-columns: 130px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(79, 118, 102, 0.18);
+}
+
+.cart-item-img {
+    width: 180px;              /* Ширина картинки */
+    height: 120px;             /* Высота картинки */
+    object-fit: cover;         /* Чтобы фото не сжималось */
+    border-radius: 20px;       /* Скругление углов у самого фото */
+    margin-right: 10px;        /* Отступ от фото до текста */
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+/* Стили для ссылки Удалить */
+.delete-link {
+    background: none;
+    border: none;
+    color: #4C7362;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* Цена */
+.cart-item-price {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.thumb {
+  height: 90px;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+}
+
+.thumb--one {
+  background-image: url("images/m_3.jpg");
+}
+
+.thumb--two {
+  background-image: url("images/m_2.jpg");
+}
+
+.thumb--three {
+  background-image: url("images/m_9.jpg");
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item-info h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.item-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+}
+
+.item-actions button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.item-actions button:hover {
+  color: var(--deep);
+}
+
+.item-actions .remove {
+  color: #b0d76f;
+}
+
+.price {
+  margin: 0;
+  font-size: 24px;
+  padding-right: 12px;
+}
+
+.summary {
+  border-top: 3px solid rgba(79, 118, 102, 0.35);
+  border-bottom: 3px solid rgba(79, 118, 102, 0.35);
+  padding: 16px 10px;
+  background: var(--panel-soft);
+  background: #90A79D;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.summary p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.details {
+  align-self: flex-start;
+  border: 0;
+  background: transparent;
+  color: #5f746a;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.details:hover {
+  color: var(--deep);
+}
+
+.pay-btn {
+  height: 70px;
+  border: none;
+  border-radius: 16px;
+  background-color: var(--text-large);
+  color: #B4E346;
+  font-size: 33px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;      /* Чтобы кнопка вела себя как блок */
+  margin-bottom: 100px; /* Величина отступа (можешь менять число) */
+}
+
+.pay-btn:hover {
+  background-color: #132200;
+}

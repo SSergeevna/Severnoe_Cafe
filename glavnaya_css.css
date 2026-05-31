@@ -1,0 +1,173 @@
+
+/* --- БАННЕРЫ С ФОТО --- */
+.banners {
+    margin-top: 30px;
+}
+
+.banner {
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* Задаём плавность перехода (тайминг и тип анимации) */
+    transition: transform 0.5s ease;
+
+    /* Убедимся, что увеличение происходит от центра (это значение по умолчанию, но полезно помнить) */
+    transform-origin: center;
+}
+
+.banner:hover {
+    /* При наведении увеличиваем на 5% (масштаб 1.15) */
+    transform: scale(1.05);
+}
+
+.banner-large {
+    height: 350px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.banner-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.banner-small {
+    height: 250px;
+}
+
+.accent-text {
+    position: absolute;
+    top: 20px;
+    color: var(--accent-bright);
+    font-weight: 800;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    transition: transform 0.5s ease; /* Обязательно для плавности */
+}
+/* 3. А теперь заставляем текст расти сильнее при наведении на родителя */
+.banner:hover .accent-text {
+    transform: scale(1.20); /* Текст растет на 10% (это на 5% больше, чем картинка) */
+    transition: transform 0.5s ease;
+}
+
+/* --- СЕКЦИЯ "О НАС" --- */
+.info-section {
+    padding: 60px 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Красивый эффект при скролле */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.info-content {
+    max-width: 800px;
+}
+
+.info-block {
+    margin-bottom: 40px;
+}
+
+.info-block h4 {
+    font-weight: 800;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.info-block p {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+/* --- ОТЗЫВЫ И ГАЛЕРЕЯ --- */
+.review-gallery-section {
+    text-align: center;
+    padding: 40px 0 60px 0;
+}
+
+.review-block h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.feedback-btn {
+    background-color: var(--text-large);
+    color: #B4E346;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    /* Магия плавности: цвет будет меняться не мгновенно, а мягко за 0.3 секунды */
+    transition: background-color 0.3s ease;
+}
+
+/* Состояние при наведении (темное) */
+.feedback-btn:hover {
+    background-color: #132200; /* Очень темный зеленый из твоего референса */
+}
+
+.section-title {
+    color: var(--text-large);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.gallery-block p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.gallery-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 24%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.gallery-grid {
+    display: flex;         /* Выстраиваем фото в ряд */
+    gap: 20px;             /* Расстояние между ними */
+    overflow-x: auto;      /* ВКЛЮЧАЕМ СКРОЛЛ */
+    scroll-behavior: smooth; /* Делаем его плавным */
+    padding-bottom: 20px;
+    
+    /* Убираем полоску скролла */
+    -ms-overflow-style: none;  
+    scrollbar-width: none;     
+}
+
+.gallery-grid::-webkit-scrollbar {
+    display: none; /* Скрываем полоску в Chrome/Safari */
+}
+
+.gallery-grid img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    flex-shrink: 0;        /* ОЧЕНЬ ВАЖНО: не дает картинкам сжиматься */
+}
+
+/* Убираем полоску в Chrome, Safari и Opera */
+.gallery-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-grid {
+    scroll-behavior: smooth;
+}

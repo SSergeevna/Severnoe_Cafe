@@ -1,0 +1,130 @@
+
+/* --- ОСНОВА САЙТА --- */
+
+.menu-title {
+    margin: 0 0 16px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--text-large);
+}
+
+/* Контейнер всей сетки */
+.menu-grid {
+    display: grid;
+    /* Создаем 4 колонки равной ширины */
+    grid-template-columns: repeat(4, 1fr); 
+    /* Расстояние между карточками (подберите по макету, примерно 20-30px) */
+    gap: 30px; 
+    padding: 5px 0;
+    margin-bottom: 100px;
+}
+
+/* КАРТОЧКА БЛЮДА (общие настройки) */
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Расстояние от фото до плашки с текстом */
+    width: 100%; /* Теперь ширина адаптивна под колонку */
+    font-family: 'Inter', sans-serif; /* Шрифт по макету */
+}
+
+/* ОБЕРТКА ДЛЯ ФОТО (важна для анимации) */
+.card-image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Делает фото идеально квадратным */
+    border-radius: 20px;
+    overflow: hidden; /* Обрезает все, что выходит за рамки */
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease; /* Плавность анимации */
+    transform-origin: center;
+}
+
+/* АНИМАЦИЯ 1: Увеличение картинки на 5% (1.05) при наведении НА ВСЮ карточку */
+.menu-card:hover .card-image-wrapper img {
+    transform: scale(1.05);
+}
+
+/* ПЛАШКА С ИНФОРМАЦИЕЙ */
+.card-info {
+    background-color: #B9CCBE; /* Цвет плашки по макету */
+    border-radius: 15px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dish-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #002111;
+    margin: 0;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* АНИМАЦИЯ 2: Смена цвета НАЗВАНИЯ на #B4E346 при наведении */
+.dish-title:hover {
+    color: #B4E346;
+}
+
+.dish-link {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: inherit;        /* Заставляет текст наследовать цвет заголовка */
+}
+
+.dish-link:hover {
+    color: inherit;        /* Чтобы при наведении цвет не менялся, если не нужно */
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dish-price {
+    font-size: 16px;
+    font-weight: 800;
+    color: #002111;
+}
+
+.card-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.action-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+/* АНИМАЦИЯ 3: Смена цвета ИКОНОК (корзина, сердце) на #B4E346 при наведении */
+.action-icon:hover {
+    /* Этот фильтр делает из темного цвета точный оттенок #B4E346 */
+    filter: brightness(0) saturate(100%) invert(84%) sepia(21%) saturate(996%) hue-rotate(36deg) brightness(97%) contrast(88%);
+}
+
+/* Адаптивность: если экран станет узким (например, на планшетах), 
+   сетка перестроится в 2 колонки */
+@media (max-width: 1024px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Для мобильных телефонов — в 1 колонку */
+@media (max-width: 600px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}

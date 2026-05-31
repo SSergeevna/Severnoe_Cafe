@@ -1,0 +1,180 @@
+/* --- БАЗОВЫЕ НАСТРОЙКИ И ЦВЕТА --- */
+:root {
+    --bg-color: #E8F1EC;
+    --main-color: #90A79D;
+    --text-large: #4C7362;
+    --text-normal: #132200;
+    --accent-bright: #B4E346;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-normal);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; 
+    line-height: 1.5;
+    min-height: 100vh; /* Минимальная высота = 100% высоты окна браузера */
+    margin: 0;
+}
+
+/* Контейнер ограничивает ширину сайта по центру */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Полоса-разделитель */
+.divider {
+    border: none;
+    border-top: 2px solid var(--text-large);
+    margin: 30px 0;
+    opacity: 0.8;
+}
+
+/* --- ШАПКА САЙТА --- */
+.header {
+    padding-top: 30px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    text-align: center;
+    color: var(--text-large);
+}
+
+.logo h1 {
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.logo-icon {
+    width: 60px; 
+    height: 60px;
+    transition: color 0.3s ease;
+}
+
+.logo-icon:hover {
+    filter: brightness(0) saturate(100%) invert(8%) sepia(34%) saturate(1542%) hue-rotate(106deg) brightness(91%) contrast(104%);
+}
+
+.header-icons {
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.header-icons img {
+    transition: filter 0.3s ease; /* Плавный переход */
+}
+
+.header-icons img:hover {
+    filter: invert(82%) sepia(54%) saturate(543%) hue-rotate(33deg) brightness(96%) contrast(91%);
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 100px; 
+}
+
+.main-menu {
+    display: flex;
+    gap: 70px; 
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #132200;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+/* Цвет ссылок ПРИ НАВЕДЕНИИ */
+.main-menu a:hover {
+    color: #B4E346;
+}
+
+.search-bar {
+    width: 350px; /* Ширина полоски поиска */
+    background-color: var(--main-color);
+    border-radius: 20px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #132200;
+}
+
+/* --- ПОДВАЛ (FOOTER) --- */
+.footer {
+    background-color: var(--main-color);
+    padding: 40px 0;
+    font-size: 12px;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer-left p, .footer-right p {
+    margin-bottom: 10px;
+}
+
+.copyright {
+    margin-top: 20px;
+    opacity: 0.7;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.social-icons {
+    display: flex;
+    gap: 70px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.social-icons img {
+    transition: filter 0.3s ease; /* Плавный переход */
+}
+
+.social-icons img:hover {
+    /* Этот фильтр примерно перекрашивает черное в #B4E346 */
+    filter: invert(82%) sepia(54%) saturate(543%) hue-rotate(33deg) brightness(96%) contrast(91%);
+}
